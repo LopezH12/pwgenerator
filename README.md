@@ -3,8 +3,8 @@ This project helps users genreate passwords using any length between 8 and 128, 
 
 # Overview
 This project in particular was mainly focusing on Javascript, and how to interact with the user. Using Vars, Loops, I was able to make the user answer a prompt and having them confirm what charaters they want on their password.
-# Images 
- ![Password-Site](images/)
+# Images Homework
+ ![Password-Site](\images\Password Generator.png)
 # Code Files
 Files used
 
