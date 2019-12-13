@@ -5,6 +5,9 @@ This project helps users genreate passwords using any length between 8 and 128, 
 This project in particular was mainly focusing on Javascript, and how to interact with the user. Using Vars, Loops, I was able to make the user answer a prompt and having them confirm what charaters they want on their password.
 # Images Homework
  !['Website'](.\\images\Password Generator.png)
+
+ # Website URL
+ https://lopezh12.github.io/pwgenerator/
 # Code Files
 Files used
 
