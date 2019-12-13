@@ -9,6 +9,7 @@ var generateEL = document.getElementById('generate');
 var clipboardEL = document.getElementById('copy');
 var resultEL = document.getElementById('result');
 
+function password(){
 var length = prompt('How many charaters would you like your password to contain?');
 while(!validLength){
     if(length < 8 || length > 128){
@@ -63,9 +64,9 @@ if(AskSpec === true && AskNum === true && AskLow === true && AskUp === true) {
 }
  
 else if(AskSpec === true && AskNum === true && AskLow === true && AskUp === false) {
-    var allTrue = ['lower', 'num', 'special'];
+    var threeTrue = ['lower', 'num', 'special'];
     for(var l = 0; l < length; l++){
-        var any = allTrue[Math.floor(Math.random() * 4)];
+        var any = threeTrue[Math.floor(Math.random() * 3)];
         if(any === 'special'){
             empty += special.charAt(Math.floor(Math.random() * 13));
         }
@@ -75,17 +76,47 @@ else if(AskSpec === true && AskNum === true && AskLow === true && AskUp === fals
         else{
             empty += num.charAt(Math.floor(Math.random() * 9));
         }
+    }
 }
 
 else if(AskSpec === true && AskNum === true && AskLow === false && AskUp === false) {
-    var allTrue = ['num', 'special'];
+    var twoTrue = ['num', 'special'];
     for(var l = 0; l < length; l++){
-        var any = allTrue[Math.floor(Math.random() * 4)];
+        var any = twoTrue[Math.floor(Math.random() * 2)];
         if(any === 'special'){
             empty += special.charAt(Math.floor(Math.random() * 13));
         }
         else{
             empty += num.charAt(Math.floor(Math.random() * 9));
         }
+    }
 }
 
+else if(AskSpec === true && AskNum === false && AskLow === false && AskUp === false) {
+    for(var l = 0; l < length; l++){
+            empty += special.charAt(Math.floor(Math.random() * 13));
+    }   
+}
+
+else if(AskSpec === false && AskNum === true && AskLow === false && AskUp === false) {
+    for(var l = 0; l < length; l++){
+        empty += num.charAt(Math.floor(Math.random() * 9));  
+    }     
+}
+
+else if(AskSpec === false && AskNum === false && AskLow === true && AskUp === false) {
+    for(var l = 0; l < length; l++){
+           empty += lower.charAt(Math.floor(Math.random() * 26)); 
+    }      
+}
+
+else {
+    for(var l = 0; l < length; l++){
+           empty += upper.charAt(Math.floor(Math.random() * 26));       
+    }
+}
+console.log(empty);
+resultEL = empty;
+}
+
+var generate = document.getElementById("generate").addEventListener("click", password);
