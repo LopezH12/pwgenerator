@@ -10,7 +10,7 @@ Files used
 
 * ['Main HTML'](index.html)
 * ['Main CSS](style.css)
-* ['Main Java'](generator.js)
+* ['Main Java'](java.js)
 
 
 
